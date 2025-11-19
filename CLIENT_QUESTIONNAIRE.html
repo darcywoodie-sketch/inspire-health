@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inspire Health Osteo - Website Redesign Questionnaire</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        
+        h1 {
+            color: #0CB4D0;
+            margin-bottom: 10px;
+            font-size: 28px;
+        }
+        
+        .subtitle {
+            color: #666;
+            margin-bottom: 30px;
+            font-size: 14px;
+        }
+        
+        h2 {
+            color: #0CB4D0;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            font-size: 20px;
+            border-bottom: 2px solid #0CB4D0;
+            padding-bottom: 5px;
+        }
+        
+        .section {
+            margin-bottom: 30px;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 600;
+            color: #333;
+        }
+        
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="url"],
+        input[type="number"],
+        textarea,
+        select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 14px;
+            font-family: inherit;
+        }
+        
+        textarea {
+            min-height: 80px;
+            resize: vertical;
+        }
+        
+        .checkbox-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 10px;
+        }
+        
+        .checkbox-item {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        input[type="checkbox"] {
+            width: 18px;
+            height: 18px;
+        }
+        
+        .practitioner-section {
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            border-left: 4px solid #0CB4D0;
+        }
+        
+        .practitioner-section h3 {
+            color: #0CB4D0;
+            margin-bottom: 15px;
+        }
+        
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+        
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            .container {
+                box-shadow: none;
+                padding: 20px;
+            }
+            .no-print {
+                display: none;
+            }
+        }
+        
+        .button-group {
+            margin-top: 30px;
+            text-align: center;
+        }
+        
+        button {
+            background: #0CB4D0;
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+            margin: 5px;
+        }
+        
+        button:hover {
+            background: #0a9bb8;
+        }
+        
+        .info-box {
+            background: #e8f4f8;
+            padding: 15px;
+            border-radius: 6px;
+            margin-bottom: 20px;
+            border-left: 4px solid #0CB4D0;
+        }
+        
+        .required {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Inspire Health Osteo</h1>
+        <p class="subtitle">Website Redesign Questionnaire</p>
+        <p style="margin-bottom: 30px;">Please fill out this questionnaire to help us create the perfect website for your clinic. Take your time and provide as much detail as possible.</p>
+        
+        <div class="info-box no-print">
+            <strong>💡 Tips:</strong> You can fill this out directly in your browser, then print to PDF or save as HTML. 
+            All fields are editable - just click and type!
+        </div>
+
+        <form id="questionnaireForm">
+            
+            <!-- Section 1: Clinic Information -->
+            <div class="section">
+                <h2>1. Clinic Information</h2>
+                
+                <div class="form-group">
+                    <label>Full Clinic Name <span class="required">*</span></label>
+                    <input type="text" name="clinic_name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label>Preferred Tagline or Motto</label>
+                    <input type="text" name="tagline" placeholder="e.g., Relieve Pain. Restore Movement. Reconnect with Your Best Self.">
+                </div>
+                
+                <div class="form-group">
+                    <label>Short Description (1-2 sentences) <span class="required">*</span></label>
+                    <textarea name="description" required></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label>Full Address <span class="required">*</span></label>
+                    <textarea name="address" required></textarea>
+                </div>
+                
+                <div class="grid-2">
+                    <div class="form-group">
+                        <label>Phone Number <span class="required">*</span></label>
+                        <input type="tel" name="phone" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Email Address <span class="required">*</span></label>
+                        <input type="email" name="email" required>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section 2: Operating Hours -->
+            <div class="section">
+                <h2>2. Operating Hours</h2>
+                
+                <div class="grid-2">
+                    <div class="form-group">
+                        <label>Monday</label>
+                        <input type="text" name="hours_monday" placeholder="e.g., 9:00 AM - 6:00 PM">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Tuesday</label>
+                        <input type="text" name="hours_tuesday">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Wednesday</label>
+                        <input type="text" name="hours_wednesday">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Thursday</label>
+                        <input type="text" name="hours_thursday">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Friday</label>
+                        <input type="text" name="hours_friday">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Saturday</label>
+                        <input type="text" name="hours_saturday">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Sunday</label>
+                        <input type="text" name="hours_sunday" placeholder="e.g., Closed">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section 3: Practice History -->
+            <div class="section">
+                <h2>3. Practice History & Credibility</h2>
+                
+                <div class="form-group">
+                    <label>How many years has the clinic been operating?</label>
+                    <input type="number" name="years_operating" min="0">
+                </div>
+                
+                <div class="form-group">
+                    <label>Total number of patients treated (if known)</label>
+                    <input type="number" name="patients_treated" min="0">
+                </div>
+                
+                <div class="form-group">
+                    <label>Patient satisfaction rate or percentage (if available)</label>
+                    <input type="text" name="satisfaction_rate" placeholder="e.g., 98%">
+                </div>
+                
+                <div class="form-group">
+                    <label>Awards or Recognitions</label>
+                    <textarea name="awards" placeholder="List any awards, certifications, or recognitions"></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label>Professional Memberships</label>
+                    <textarea name="memberships" placeholder="e.g., Australian Osteopathic Association"></textarea>
+                </div>
+            </div>
+
+            <!-- Section 4: Unique Selling Points -->
+            <div class="section">
+                <h2>4. What Makes Your Clinic Different?</h2>
+                <p style="margin-bottom: 15px; color: #666;">List 3-5 unique selling points that differentiate you from competitors:</p>
+                
+                <div class="form-group">
+                    <label>Point 1</label>
+                    <input type="text" name="usp_1">
+                </div>
+                
+                <div class="form-group">
+                    <label>Point 2</label>
+                    <input type="text" name="usp_2">
+                </div>
+                
+                <div class="form-group">
+                    <label>Point 3</label>
+                    <input type="text" name="usp_3">
+                </div>
+                
+                <div class="form-group">
+                    <label>Point 4</label>
+                    <input type="text" name="usp_4">
+                </div>
+                
+                <div class="form-group">
+                    <label>Point 5</label>
+                    <input type="text" name="usp_5">
+                </div>
+            </div>
+
+            <!-- Section 5: Services -->
+            <div class="section">
+                <h2>5. Services Offered</h2>
+                
+                <div class="form-group">
+                    <label>Main Service 1</label>
+                    <input type="text" name="service_1_name" placeholder="Service name">
+                    <textarea name="service_1_desc" placeholder="Brief description" style="margin-top: 10px;"></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label>Main Service 2</label>
+                    <input type="text" name="service_2_name" placeholder="Service name">
+                    <textarea name="service_2_desc" placeholder="Brief description" style="margin-top: 10px;"></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label>Main Service 3</label>
+                    <input type="text" name="service_3_name" placeholder="Service name">
+                    <textarea name="service_3_desc" placeholder="Brief description" style="margin-top: 10px;"></textarea>
+                </div>
+            </div>
+
+            <!-- Section 6: Conditions Treated -->
+            <div class="section">
+                <h2>6. Conditions Treated</h2>
+                <p style="margin-bottom: 15px; color: #666;">Check all that apply:</p>
+                
+                <div class="checkbox-group">
+                    <div class="checkbox-item">
+                        <input type="checkbox" name="condition_back_pain" id="back_pain">
+                        <label for="back_pain" style="font-weight: normal;">Back Pain</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" name="condition_neck_pain" id="neck_pain">
+                        <label for="neck_pain" style="font-weight: normal;">Neck Pain</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" name="condition_headaches" id="headaches">
+                        <label for="headaches" style="font-weight: normal;">Headaches/Migraines</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" name="condition_sports" id="sports">
+                        <label for="sports" style="font-weight: normal;">Sports Injuries</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" name="condition_joint" id="joint">
+                        <label for="joint" style="font-weight: normal;">Joint Pain</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" name="condition_pregnancy" id="pregnancy">
+                        <label for="pregnancy" style="font-weight: normal;">Pregnancy-Related Pain</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" name="condition_posture" id="posture">
+                        <label for="posture" style="font-weight: normal;">Postural Issues</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" name="condition_chronic" id="chronic">
+                        <label for="chronic" style="font-weight: normal;">Chronic Pain</label>
+                    </div>
+                </div>
+                
+                <div class="form-group" style="margin-top: 15px;">
+                    <label>Other Conditions (please specify)</label>
+                    <textarea name="conditions_other"></textarea>
+                </div>
+            </div>
+
+            <!-- Section 7: Practitioners -->
+            <div class="section">
+                <h2>7. Practitioner Information</h2>
+                
+                <div class="practitioner-section">
+                    <h3>Practitioner 1</h3>
+                    <div class="form-group">
+                        <label>Full Name</label>
+                        <input type="text" name="pract_1_name">
+                    </div>
+                    <div class="form-group">
+                        <label>Qualifications</label>
+                        <input type="text" name="pract_1_qual" placeholder="e.g., B.Ost, M.Ost">
+                    </div>
+                    <div class="grid-2">
+                        <div class="form-group">
+                            <label>Years of Experience</label>
+                            <input type="number" name="pract_1_years" min="0">
+                        </div>
+                        <div class="form-group">
+                            <label>Photo Available?</label>
+                            <select name="pract_1_photo">
+                                <option value="">Select...</option>
+                                <option value="yes">Yes</option>
+                                <option value="no">No</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Specializations</label>
+                        <input type="text" name="pract_1_special">
+                    </div>
+                    <div class="form-group">
+                        <label>Brief Bio (2-3 sentences)</label>
+                        <textarea name="pract_1_bio"></textarea>
+                    </div>
+                </div>
+                
+                <div class="practitioner-section">
+                    <h3>Practitioner 2</h3>
+                    <div class="form-group">
+                        <label>Full Name</label>
+                        <input type="text" name="pract_2_name">
+                    </div>
+                    <div class="form-group">
+                        <label>Qualifications</label>
+                        <input type="text" name="pract_2_qual">
+                    </div>
+                    <div class="grid-2">
+                        <div class="form-group">
+                            <label>Years of Experience</label>
+                            <input type="number" name="pract_2_years" min="0">
+                        </div>
+                        <div class="form-group">
+                            <label>Photo Available?</label>
+                            <select name="pract_2_photo">
+                                <option value="">Select...</option>
+                                <option value="yes">Yes</option>
+                                <option value="no">No</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Specializations</label>
+                        <input type="text" name="pract_2_special">
+                    </div>
+                    <div class="form-group">
+                        <label>Brief Bio</label>
+                        <textarea name="pract_2_bio"></textarea>
+                    </div>
+                </div>
+                
+                <div class="practitioner-section">
+                    <h3>Practitioner 3</h3>
+                    <div class="form-group">
+                        <label>Full Name</label>
+                        <input type="text" name="pract_3_name">
+                    </div>
+                    <div class="form-group">
+                        <label>Qualifications</label>
+                        <input type="text" name="pract_3_qual">
+                    </div>
+                    <div class="grid-2">
+                        <div class="form-group">
+                            <label>Years of Experience</label>
+                            <input type="number" name="pract_3_years" min="0">
+                        </div>
+                        <div class="form-group">
+                            <label>Photo Available?</label>
+                            <select name="pract_3_photo">
+                                <option value="">Select...</option>
+                                <option value="yes">Yes</option>
+                                <option value="no">No</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Specializations</label>
+                        <input type="text" name="pract_3_special">
+                    </div>
+                    <div class="form-group">
+                        <label>Brief Bio</label>
+                        <textarea name="pract_3_bio"></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section 8: Testimonials -->
+            <div class="section">
+                <h2>8. Patient Testimonials</h2>
+                
+                <div class="form-group">
+                    <label>Do you have patient reviews/testimonials?</label>
+                    <select name="has_testimonials">
+                        <option value="">Select...</option>
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label>How many testimonials would you like featured? (recommended: 3-5)</label>
+                    <input type="number" name="testimonial_count" min="0" max="10" value="3">
+                </div>
+                
+                <div class="form-group">
+                    <label>Google Reviews Link (if available)</label>
+                    <input type="url" name="google_reviews">
+                </div>
+                
+                <div class="form-group">
+                    <label>Sample Testimonial 1</label>
+                    <textarea name="testimonial_1" placeholder="Patient name, rating, and review text"></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label>Sample Testimonial 2</label>
+                    <textarea name="testimonial_2"></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label>Sample Testimonial 3</label>
+                    <textarea name="testimonial_3"></textarea>
+                </div>
+            </div>
+
+            <!-- Section 9: Philosophy -->
+            <div class="section">
+                <h2>9. Clinic Philosophy & Values</h2>
+                
+                <div class="form-group">
+                    <label>Mission Statement</label>
+                    <textarea name="mission"></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label>Core Value 1</label>
+                    <input type="text" name="value_1">
+                </div>
+                
+                <div class="form-group">
+                    <label>Core Value 2</label>
+                    <input type="text" name="value_2">
+                </div>
+                
+                <div class="form-group">
+                    <label>Core Value 3</label>
+                    <input type="text" name="value_3">
+                </div>
+                
+                <div class="form-group">
+                    <label>Treatment Philosophy</label>
+                    <textarea name="philosophy" placeholder="How would you describe your treatment approach?"></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label>What can patients expect during their first visit?</label>
+                    <textarea name="first_visit"></textarea>
+                </div>
+            </div>
+
+            <!-- Section 10: Images -->
+            <div class="section">
+                <h2>10. Visual Assets Available</h2>
+                <p style="margin-bottom: 15px; color: #666;">Check all that apply:</p>
+                
+                <div class="checkbox-group">
+                    <div class="checkbox-item">
+                        <input type="checkbox" name="img_clinic_exterior" id="img_ext">
+                        <label for="img_ext" style="font-weight: normal;">Clinic Exterior Photos</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" name="img_treatment_room" id="img_room">
+                        <label for="img_room" style="font-weight: normal;">Treatment Room Photos</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" name="img_practitioners" id="img_pract">
+                        <label for="img_pract" style="font-weight: normal;">Practitioner Photos</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" name="img_equipment" id="img_eq">
+                        <label for="img_eq" style="font-weight: normal;">Equipment/Facility Photos</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" name="img_team" id="img_team">
+                        <label for="img_team" style="font-weight: normal;">Team Photos</label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section 11: Booking -->
+            <div class="section">
+                <h2>11. Booking & Appointments</h2>
+                
+                <div class="form-group">
+                    <label>Booking System URL</label>
+                    <input type="url" name="booking_url" placeholder="https://inspirehealthosteopathy.cliniko.com/bookings">
+                </div>
+                
+                <div class="grid-2">
+                    <div class="form-group">
+                        <label>New Patient Consultation Duration</label>
+                        <input type="text" name="consult_duration" placeholder="e.g., 60 minutes">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Follow-up Appointment Duration</label>
+                        <input type="text" name="followup_duration" placeholder="e.g., 30 minutes">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section 12: Social Media -->
+            <div class="section">
+                <h2>12. Social Media & Online Presence</h2>
+                
+                <div class="form-group">
+                    <label>Facebook URL</label>
+                    <input type="url" name="facebook">
+                </div>
+                
+                <div class="form-group">
+                    <label>Instagram URL</label>
+                    <input type="url" name="instagram">
+                </div>
+                
+                <div class="form-group">
+                    <label>LinkedIn URL</label>
+                    <input type="url" name="linkedin">
+                </div>
+            </div>
+
+            <!-- Section 13: Additional Info -->
+            <div class="section">
+                <h2>13. Additional Information</h2>
+                
+                <div class="form-group">
+                    <label>Any other information you'd like to include?</label>
+                    <textarea name="additional_info" style="min-height: 120px;"></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label>Preferred Launch Date</label>
+                    <input type="date" name="launch_date">
+                </div>
+            </div>
+
+            <!-- Submit Section -->
+            <div class="button-group no-print">
+                <button type="button" onclick="window.print()">Print to PDF</button>
+                <button type="button" onclick="saveForm()">Save as HTML</button>
+            </div>
+            
+            <div style="margin-top: 40px; padding-top: 20px; border-top: 2px solid #0CB4D0;">
+                <p style="text-align: center; color: #666;">
+                    <strong>Thank you for completing this questionnaire!</strong><br>
+                    Please save or print this form and return it to us.
+                </p>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        function saveForm() {
+            const formData = new FormData(document.getElementById('questionnaireForm'));
+            const data = {};
+            for (let [key, value] of formData.entries()) {
+                data[key] = value;
+            }
+            
+            const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'questionnaire_data.json';
+            a.click();
+        }
+    </script>
+</body>
+</html>
+
+

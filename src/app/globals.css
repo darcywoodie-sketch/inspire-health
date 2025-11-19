@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply font-body bg-white;
+    font-family: var(--font-lato), sans-serif;
+    font-weight: 400;
+    color: #333333;
+    line-height: 1.7;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading;
+    font-family: var(--font-poppins), sans-serif;
+    font-weight: 600;
+  }
+
+  h1 {
+    font-weight: 700;
+  }
+
+  p {
+    color: #333333;
+    line-height: 1.7;
+    font-weight: 400;
+  }
+
+  /* Mobile Typography Guidelines */
+  @media (max-width: 768px) {
+    body {
+      font-size: 16px; /* 16px base for body text */
+      line-height: 1.7; /* 1.6-1.8em range */
+    }
+    
+    p {
+      font-size: 16px; /* 16-18px for body text */
+      line-height: 1.7;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-accent text-[#111] rounded-[8px] px-8 py-4 font-semibold transition-all duration-300;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+  }
+  
+  .btn-primary:hover {
+    @apply bg-[#F5D840] -translate-y-0.5;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  iframe {
+    min-height: 1800px;
+  }
+}
+
