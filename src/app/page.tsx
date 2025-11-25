@@ -230,7 +230,7 @@ const Home = () => {
             {/* Photo 3 - Bottom Left */}
             <div className="relative w-full aspect-square overflow-hidden rounded-lg">
               <Image
-                src="/images/3.png"
+                src="/images/3.jpeg"
                 alt="Osteopathic treatment"
                 fill
                 className="object-cover"

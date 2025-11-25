@@ -89,11 +89,11 @@ const Navbar = () => {
         className={`
           fixed bottom-0 left-0 right-0 z-50 flex flex-col transition-transform duration-300 md:hidden
           ${isOpen ? "translate-y-0" : "translate-y-full pointer-events-none"}
-          h-[75vh] bg-white/95 backdrop-blur-sm rounded-t-3xl shadow-2xl overflow-hidden
+          h-[85vh] max-h-[600px] bg-white/95 backdrop-blur-sm rounded-t-3xl shadow-2xl overflow-hidden
         `}
       >
         {/* Header */}
-        <div className="p-6 border-b border-gray-200 flex items-center justify-between flex-shrink-0">
+        <div className="p-4 sm:p-6 border-b border-gray-200 flex items-center justify-between flex-shrink-0">
           <Link href="/" onClick={() => setIsOpen(false)}>
             <Image
               src="/logos/2.png"
@@ -112,8 +112,8 @@ const Navbar = () => {
           </button>
         </div>
 
-        {/* Navigation Links as Cards */}
-        <nav className="flex flex-col gap-4 px-6 pt-6 pb-4 overflow-hidden flex-1">
+        {/* Navigation Links as Cards - Scrollable */}
+        <nav className="flex flex-col gap-3 px-4 sm:px-6 pt-4 pb-4 overflow-y-auto flex-1 min-h-0">
           {navLinks.map((link, index) => {
             // Progressive gradient: top card (index 0) is darkest, bottom card (index 4) is lightest
             const totalCards = navLinks.length;
@@ -126,13 +126,13 @@ const Navbar = () => {
                 key={link.href}
                 href={link.href}
                 onClick={() => setIsOpen(false)}
-                className="group relative block p-6 rounded-2xl shadow-md transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5"
+                className="group relative block p-5 rounded-2xl shadow-md transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5 flex-shrink-0"
                 style={{
                   background: `linear-gradient(135deg, rgba(94, 179, 217, ${opacity}) 0%, rgba(126, 198, 232, ${opacity}) 100%)`,
                   backdropFilter: 'blur(10px)',
                 }}
               >
-                <span className="text-2xl font-semibold text-white">
+                <span className="text-xl sm:text-2xl font-semibold text-white">
                   {link.label}
                 </span>
                 <div className="absolute inset-0 rounded-2xl bg-white opacity-0 group-hover:opacity-10 transition-opacity" />
@@ -141,11 +141,11 @@ const Navbar = () => {
           })}
         </nav>
 
-        {/* Bottom CTA */}
-        <div className="px-6 pb-6 pt-0 flex-shrink-0">
+        {/* Bottom CTA - Fixed at bottom */}
+        <div className="px-4 sm:px-6 pb-4 pt-2 flex-shrink-0 border-t border-gray-200 bg-white/95">
           <a
             href="https://inspire-health-osteo.au2.cliniko.com/bookings"
-            className="w-full block text-center bg-gradient-to-r from-[#F7E250] to-[#EADB4B] text-[#111] font-bold text-lg py-5 rounded-2xl shadow-lg cliniko-book-online hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300"
+            className="w-full block text-center bg-gradient-to-r from-[#F7E250] to-[#EADB4B] text-[#111] font-bold text-base sm:text-lg py-4 rounded-2xl shadow-lg cliniko-book-online hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300"
             onClick={() => setIsOpen(false)}
           >
             Book an Appointment
