@@ -86,18 +86,18 @@ const Home = () => {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 whileHover={{ y: -4 }}
-                className="bg-white rounded-card p-6 md:p-8 shadow-card flex items-start gap-6 md:gap-8 transition-all duration-300"
+                className="bg-white rounded-card p-6 md:p-8 shadow-card flex items-center gap-6 md:gap-8 transition-all duration-300"
               >
-                <div className="w-16 h-16 md:w-20 md:h-20 rounded-full border-[3px] border-primary/30 flex items-center justify-center flex-shrink-0 bg-primary/5 p-2">
+                <div className="w-16 h-16 md:w-20 md:h-20 rounded-full border-[3px] border-primary/30 flex items-center justify-center flex-shrink-0 bg-primary/5 p-2 overflow-hidden">
                   <Image
                     src={prop.icon}
                     alt={prop.title}
                     width={48}
                     height={48}
-                    className="w-full h-full object-contain"
+                    className="max-w-full max-h-full object-contain object-center"
                   />
                 </div>
-                <div className="flex-1 pt-2">
+                <div className="flex-1">
                   <h3 className="text-[20px] md:text-2xl font-heading font-semibold text-primary mb-2">
                     {prop.title}
                   </h3>
