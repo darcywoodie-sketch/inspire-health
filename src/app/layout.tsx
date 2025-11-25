@@ -23,7 +23,9 @@ export const metadata: Metadata = {
   title: "Inspire Health Osteo - Relieve Pain. Restore Movement.",
   description: "Professional osteopathy services in a welcoming environment. Book your appointment today.",
   icons: {
-    icon: "/favicon.ico",
+    icon: "/favicon/favicon.png",
+    shortcut: "/favicon/favicon.png",
+    apple: "/favicon/favicon.png",
   },
 };
 

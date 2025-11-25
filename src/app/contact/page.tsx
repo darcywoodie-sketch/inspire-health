@@ -153,11 +153,11 @@ const Contact = () => {
                   <h3 className="text-xl font-heading font-semibold text-primary mb-2">
                     Address
                   </h3>
-                  <p className="text-dark/70">
-                    26-28 Roberna St<br />
+                  <p className="text-primary font-semibold">
+                    Factory 23, 26-28 Roberna St<br />
                     Moorabbin VIC 3189<br />
                     Australia<br />
-                    <span className="text-sm italic">Located on the 1st floor of Iron Viking Gym</span>
+                    <span className="text-sm italic text-dark/70 font-normal">Located on the 1st floor of Iron Viking Gym</span>
                   </p>
                 </div>
 
@@ -184,12 +184,12 @@ const Contact = () => {
                     Opening Hours
                   </h3>
                   <div className="text-dark/70 space-y-1">
-                    <p>Monday: 9:00 AM - 6:00 PM</p>
+                    <p className="text-primary font-semibold">Monday: 9:00 AM - 6:00 PM</p>
                     <p>Tuesday: Closed</p>
-                    <p>Wednesday: 8:00 AM - 8:00 PM</p>
+                    <p className="text-primary font-semibold">Wednesday: 8:00 AM - 8:00 PM</p>
                     <p>Thursday: Closed</p>
                     <p>Friday: Closed</p>
-                    <p>Saturday: 8:00 AM - 11:00 AM</p>
+                    <p className="text-primary font-semibold">Saturday: 8:00 AM - 11:00 AM</p>
                     <p>Sunday: Closed</p>
                   </div>
                 </div>
@@ -221,10 +221,23 @@ const Contact = () => {
               Find Us
             </h2>
             <div className="relative bg-white rounded-card shadow-card overflow-hidden border-2 border-primary/10 hover:shadow-xl transition-shadow duration-300">
-              <div className="w-full h-[300px] md:h-[450px] lg:h-[550px] relative">
+              <div className="w-full h-[400px] sm:h-[500px] md:h-[600px] lg:h-[700px] relative">
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5 pointer-events-none z-10"></div>
+                {/* 
+                  IMPORTANT: To get the map to center properly, we need the embed code from Google Maps.
+                  
+                  Steps to get the embed code:
+                  1. Go to: https://www.google.com/maps/place/Iron+Viking+Gym/@-37.9467973,145.0674355,17z
+                  2. Click the "Share" button (top right of the info panel)
+                  3. Click the "Embed a map" tab
+                  4. Copy the ENTIRE src URL from the iframe code
+                  5. Replace the URL below with that src URL
+                  
+                  The embed code will be a long URL starting with:
+                  https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d...
+                */}
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3148.123456789!2d145.038!3d-37.935!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzfCsDU2JzA2LjAiUyAxNDXCsDAyJzE2LjgiRQ!5e0!3m2!1sen!2sau!4v1234567890123!5m2!1sen!2sau"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3148.123456789!2d145.0696242!3d-37.9467973!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad66d0e90a98d1b%3A0x283b11d123157a8f!2sIron%20Viking%20Gym!5e0!3m2!1sen!2sau!4v1735123456789!5m2!1sen!2sau"
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}
@@ -232,8 +245,18 @@ const Contact = () => {
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
                   className="w-full h-full relative z-0"
-                  title="Clinic Location - 26-28 Roberna St, Moorabbin VIC 3189"
+                  title="Iron Viking Gym - Factory 23, 26-28 Roberna St, Moorabbin VIC 3189"
                 />
+              </div>
+              <div className="absolute bottom-4 right-4 z-30">
+                <a
+                  href="https://www.google.com/maps/place/Iron+Viking+Gym/@-37.9467973,145.0674355,17z/data=!4m6!3m5!1s0x6ad66d0e90a98d1b:0x283b11d123157a8f!8m2!3d-37.9467973!4d145.0696242!16s%2Fg%2F11gydm1dsw?entry=ttu"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-primary text-white px-4 py-2 rounded-lg shadow-lg hover:bg-primary/90 transition-colors text-sm font-semibold"
+                >
+                  Open in Google Maps
+                </a>
               </div>
             </div>
           </motion.div>

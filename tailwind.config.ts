@@ -16,6 +16,7 @@ const config: Config = {
         "section-bg": "#f7f9fb",
         "text-dark": "#333333",
         "social-blue": "#5EB3D9",
+        "light-blue": "#87CEEB",
         "gradient-start": "#5EB3D9",
         "gradient-end": "#7EC6E8",
         "footer-start": "#1F3C47",

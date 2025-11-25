@@ -162,7 +162,7 @@ const Home = () => {
               <h3 className="text-[24px] md:text-3xl font-heading font-bold text-primary mb-2 md:mb-3">
                 Aditya Devani
               </h3>
-              <p className="text-base md:text-lg text-accent font-semibold mb-4 md:mb-6 leading-[1.7]">
+              <p className="text-base md:text-lg text-light-blue font-semibold mb-4 md:mb-6 leading-[1.7]">
                 Master of Health Science (Osteopathy)<br />
                 Bachelor of Health Science (Osteopathy)<br />
                 BSc (Hons) Sports
@@ -349,7 +349,7 @@ const Home = () => {
               <p>
                 With a focus on the musculoskeletal system as a whole, we treat the soft tissue areas of your body, as well as working on your spine and nervous system. Our treatment approach involves a wide variety of techniques including massage, METs (Muscle Energy Techniques), articulation, and manipulation.
               </p>
-              <h3 className="text-[20px] md:text-2xl font-heading font-semibold text-accent mt-8 mb-4">
+              <h3 className="text-[20px] md:text-2xl font-heading font-semibold text-light-blue mt-8 mb-4">
                 By doing so we can assist in:
               </h3>
               <ul className="space-y-2 list-disc list-inside text-base leading-relaxed md:text-lg md:leading-[1.7] text-text-dark max-w-[90%] md:max-w-[600px]">

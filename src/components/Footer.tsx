@@ -14,7 +14,7 @@ const Footer = () => {
           {/* Logo and Description */}
           <div>
             <Image
-              src="/logos/2.png"
+              src="/logos/1.png"
               alt="Inspire Health Osteo Logo"
               width={140}
               height={70}
@@ -29,7 +29,7 @@ const Footer = () => {
           <div>
             <h3 className="font-heading font-bold text-white mb-5 text-xl">Address</h3>
             <div className="text-white text-base leading-relaxed space-y-2">
-              <p className="font-medium">
+              <p className="font-medium text-accent">
                 26-28 Roberna St<br />
                 Moorabbin VIC 3189<br />
                 Australia
@@ -71,12 +71,12 @@ const Footer = () => {
           <div>
             <h3 className="font-heading font-bold text-white mb-5 text-xl">Hours</h3>
             <div className="text-white text-base leading-relaxed space-y-2 mb-6">
-              <p className="font-medium">Monday: 9:00 AM - 6:00 PM</p>
+              <p className="font-medium text-accent">Monday: 9:00 AM - 6:00 PM</p>
               <p className="text-white/80">Tuesday: Closed</p>
-              <p className="font-medium">Wednesday: 8:00 AM - 8:00 PM</p>
+              <p className="font-medium text-accent">Wednesday: 8:00 AM - 8:00 PM</p>
               <p className="text-white/80">Thursday: Closed</p>
               <p className="text-white/80">Friday: Closed</p>
-              <p className="font-medium">Saturday: 8:00 AM - 11:00 AM</p>
+              <p className="font-medium text-accent">Saturday: 8:00 AM - 11:00 AM</p>
               <p className="text-white/80">Sunday: Closed</p>
             </div>
             

@@ -36,19 +36,21 @@ const Practitioners = () => {
       </section>
 
       {/* Practitioners Grid */}
-      <section className="py-12">
+      <section className="py-12 md:py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {practitioners.map((practitioner, index) => (
-              <PractitionerCard
-                key={practitioner.name}
-                name={practitioner.name}
-                qualifications={practitioner.qualifications}
-                bio={practitioner.bio}
-                image={practitioner.image}
-                index={index}
-              />
-            ))}
+          <div className="flex justify-center">
+            <div className="w-full max-w-3xl">
+              {practitioners.map((practitioner, index) => (
+                <PractitionerCard
+                  key={practitioner.name}
+                  name={practitioner.name}
+                  qualifications={practitioner.qualifications}
+                  bio={practitioner.bio}
+                  image={practitioner.image}
+                  index={index}
+                />
+              ))}
+            </div>
           </div>
         </div>
       </section>

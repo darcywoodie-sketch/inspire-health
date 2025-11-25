@@ -43,7 +43,7 @@ const About = () => {
                 tailored to your needs.
               </p>
               <p className="mb-6">
-                Since opening, we&apos;ve treated over 100 patients with a focus on patient-centered care, 
+                Since opening, we&apos;ve treated multiple patients with a focus on patient-centered care, 
                 education, and empowering you to have autonomy over your health. We maintain close professional 
                 relationships with follow-up support throughout your recovery.
               </p>
